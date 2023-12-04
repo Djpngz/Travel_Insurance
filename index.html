@@ -1,226 +1,364 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Travel</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-.mySlides {display:none}
-.w3-tag, .fa {cursor:pointer}
-.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
-</style>
+
+    <title>Safe Travel Assistant</title>
+    
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/circle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        new WOW().init();
+    </script>
+    
+		<script>
+
+			$(function() {
+  				$('a[href*=#]:not([href=#])').click(function() {
+    				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      					var target = $(this.hash);
+      					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      					if (target.length) {
+        					$('html,body').animate({
+          						scrollTop: target.offset().top
+        					}, 1000);
+        				return false;
+      					}
+    				}
+  				});
+			});
+		
+		</script>
+
+        <style>
+		
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                }
+
+        </style>
 </head>
+
 <body>
 
-<!-- Links (sit on top) -->
-<div class="w3-top">
-  <div class="w3-row w3-large w3-light-grey">
-    <div class="w3-col s3">
-      <a href="#" class="w3-button w3-block">Home</a>
+    <header scroll-behavior: smooth;>
+
+        <nav class="navbar-default" style="border-radius:0;"  id="navbar">
+            <div class="container-fluid" >
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" style="font-family: 'Playball', cursive; font-size: 28px; color: #fff;">Safe Travel Assistant</a>
+					
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">HOMEPAGE</a>
+                        </li>
+                        <li><a href="#content2">ABOUT US</a>
+                        </li>
+                        <li><a href="#content3">PARTNERS</a>
+                        </li>
+						<li><a href="#content5">HOW TO USE</a>
+                        </li>
+                        <li><a href="#content4">REVIEW</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <style>
+            .navbar-default {
+                background: transparent;
+            }
+            .navbar-default .navbar-nav>li>a {
+                color: #fff;
+                font-weight: 300;
+                font-family: 'Rubik', sans-serif;
+            }
+
+            .navbar-sticky {
+                background: rgb(72, 79, 87);
+            }
+            .navbar-sticky .navbar-nav>li>a {
+                color: #fff;
+                font-weight: 300;
+                font-family: 'Rubik', sans-serif;
+            }
+
+
+        </style>
+
+    </header>
+	
+	
+	
+    <div class="banner">
+        <div class="opacity_overlay">
+            <div class="info">
+                <h2>SAFE TRAVEL ASSISTANT</h2>
+                <br>
+                <h3>Travel Insurance Virtual Assistance</h3>
+                <br>
+                <a href="#content"><button type="button" id="proceed">Learn More</button></a>
+            </div>
+        </div>
     </div>
-    <div class="w3-col s3">
-      <a href="#plans" class="w3-button w3-block">Plans</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block">About</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#contact" class="w3-button w3-block">Contact</a>
-    </div>
-  </div>
+
+<div class="banner2">
+    <section id="content">
+        <div class="container">
+
+            <div class="boxes">
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="wow flipInX"><i class="fa fa-fw fa-globe"></i>Welcome to Safe Travel Assistant!</h4>
+                        </div>
+                        <div class="panel-body">
+                            <p style="text-align: Justify; "class="wow flipInX">Your trusted guide for all your travel insurance needs. We're proud to introduce our AI-powered Virtual Assistant, equipped with an advanced chatbot that simplifies the process of finding and buying travel insurance. Whether it's for a family vacation or a business trip, our chatbot provides personalized recommendations based on your specific needs. Just Upload your policy and the chatbot can answer any questions you have, including policy details, claim processes, and coverage limits, ensuring clarity and confidence in your choices. Let Safe Travel Assistant provide a seamless and stress-free travel insurance experience, allowing you to embark on your journeys with peace of mind.</p>
+                            <a href="#content2" class="btn btn-default">Click Here To Learn More...</a>
+                        </div>
+                    </div>
+                </div>
+				                
+				<div class="col-md-4">
+                    <div class="panel panel-default" >
+
+                        <div class="panel-body">
+						<img src="images/logo.JPG" class="wow flipInX">
+						</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+	
+<div class="banner3">
+    
+    <section id="content2">
+	    <div class="container">
+			
+			    <div class="col-md-12" >
+				<div class = "Panel Panel-group">
+                    <div class="panel panel-default">
+					    <div class="panel-heading">
+                            <h2 class="wow flipInX"><i class="fa fa-fw fa-plus-square"></i>Empowering Safe Travels with The Best Insurance!</h2>
+                        </div>
+                        <div class="panel-body">
+
+                            <h4 style="text-align: Center; "class="wow flipInX">Our team is comprised of knowledgeable and dedicated professionals, who are here to assist you in understanding the complexities of travel insurance and finding the right coverage to suit your needs. </h4>
+							<h4 style="text-align: Center; "class="wow flipInX">Each team member brings a wealth of industry experience. We're driven by a shared commitment to delivering top-notch customer service and ensuring transparency and understanding in travel insurance decisions.</h4>
+                        </div>
+                    </div>
+				</div>
+                </div>
+				
+				<div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/Id_Janzen.JPG" class="wow flipInX">
+                            <p style="text-align: Center; "class="wow flipInX">Janzen Christian D Aguila</p>
+							<p style="text-align: Center; "class="wow flipInX">AI Director</p>
+                        </div>
+                    </div>
+				
+                </div>				
+				<div class="col-md-3" >
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/Id_Shai.JPG" class="wow flipInX">
+                            <p style="text-align: Center; "class="wow flipInX">Shaira Leen F Balahadia</p>
+							<p style="text-align: Center; "class="wow flipInX">Technical Director</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/Id_Philip.JPG" class="wow flipInX">
+                            <p style="text-align: Center; "class="wow flipInX">Philip Paul B Eslao</p>
+							<p style="text-align: Center; "class="wow flipInX">Design Director</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/Id_Emden.JPG" class="wow flipInX">
+                            <p style="text-align: Center; "class="wow flipInX">Emden T Botin</p>
+							<p style="text-align: Center; "class="wow flipInX"	>Operations Director</p>
+                        </div>
+                    </div>
+                </div>
+				<div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/Id_Philip.JPG" class="wow flipInX">
+                            <p style="text-align: Center; "class="wow flipInX">Wyne Nathaniel D Gulle</p>
+							<p style="text-align: Center; "class="wow flipInX">Support Director</p>
+                        </div>
+                    </div>
+                </div>
+				
+		</div>
+    </section>
 </div>
+<div class="banner4">
+    <section id="content3">
+            <div class="container">
+				<div class="col-md-12" >
+                    <div class="panel panel-default">
+					    <div class="panel-heading">
+                            <h2 class="wow flipInX"><i class="fa fa-fw fa-plus-square"></i>Cultivating Strategic Alliances for Comprehensive Travel Safety!</h2>
+                        </div>
+                        <div class="panel-body">
+                            <h4 style="text-align: Center; "class="wow flipInX">We work in close cooperation with our esteemed business partners who share our commitment to provide excellent service and comprehensive travel insurance options. </h4>
+						</div>
+                    </div>
+                </div>
+				
+				<div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/comAAA.JPG" class="wow flipInX">
+                            <h3 style="text-align: left; "class="wow flipInX"><b>AAA Insurance Company</b></h3>
+							<p style="text-align: left; "class="wow flipInX">Renowned for its exceptional commitment to providing comprehensive and reliable travel insurance solutions.</p>
+							<a href="#" class="btn btn-default">Learn More</a>
+						</div>
+                    </div>
+                </div>
+				
+				<div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/comBBB.JPG" class="wow flipInX">
+                            <h3 style="text-align: left; "class="wow flipInX"><b>BBB Mabuhay Insurance</b></h3>
+							<p style="text-align: left; "class="wow flipInX">Renowned for its exceptional commitment to providing comprehensive and reliable travel insurance solutions.</p>
+							<a href="#" class="btn btn-default">Learn More</a>
+						</div>
+                    </div>
+                </div>
+				
+				<div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+							<img src="images/comCCC.JPG" class="wow flipInX">
+                            <h3 style="text-align: left; "class="wow flipInX"><b>CCC Travel Insurance</b></h3>
+							<p style="text-align: left; "class="wow flipInX">Renowned for its exceptional commitment to providing comprehensive and reliable travel insurance solutions.</p>
+							<a href="#" class="btn btn-default">Learn More</a>
+						</div>
+                    </div>
+                </div>
+				
+				
+            </div>
+    </section>
+ </div>
 
-<!-- Content -->
-<div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
+<div class="banner5">
+    <section id="content4">
+            <div class="container">
+				<div class="col-md-12" >
+                    <div class="panel panel-default">
+					    <div class="panel-heading">
+                            <h2 class="wow flipInX"><i class="fa fa-fw fa-plus-square"></i>Dive into Insightful Narratives: Introducing Our Comprehensive Travel Insurance Ratings & Review Reports!</h2>
+                        </div>
+                    </div>
+                </div>
+				
+			<iframe title="Travel Insurance Review Rating"  src="https://app.powerbi.com/reportEmbed?reportId=36f3e51d-d331-4295-b639-374072abf2da&autoAuth=true&ctid=5b973f99-77df-4beb-b27d-aa0c70b8482c" frameborder="0" allowFullScreen="true"></iframe>	
+				
+            </div>
+    </section>
+    
+	
+	<footer id="footer">
+		<div class="container">
+			<div class="col-md-4 col-sm-6">
+				<h3>Follow Us</h3>
+				<hr>
+				  <div class="w3-xlarge w3-section">
+					<p class="wow flipInX"><i class="fa fa-facebook-official w3-hover-opacity"></i> Safe Travel Assistant - Official</p>
+					<p class="wow flipInX"><i class="fa fa-instagram w3-hover-opacity"></i> @SafeTravelAssistant_Official</p>
+					<p class="wow flipInX"><i class="fa fa-twitter w3-hover-opacity"></i> SafeTravelAssistant_TwitterPage</p>
+					<p class="wow flipInX"><i class="fa fa-linkedin w3-hover-opacity"></i> SafeTravelAssistant_linkedin</p>
+					
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<h3>Contact Info</h3>
+				<hr>
+				<ul class="contact-list">
+					<li>
+						<p>
+							<i class="fa fa-home"></i>
+							Mckinley West, Taguig PH 1634
+						</p>
+						<p>
+							<i class="fa fa-phone"></i>
+							0800 999 9999
+						</p>
+						<p>
+							<i class="fa fa-envelope-o"></i>
+							SafeTravelAssistant@Gmail.com
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<h3>Newsletter</h3>
+				<hr>
+				<p>Subscribe to our newsletter to get the latest updates</p>
+				<input type="email" placeholder="Email address..." required>
+			</div>
+		</div>
+	</footer>
+	
+	<div id="copyright-part">
+		<p>&copy 2023 All Rights Reserved</p>
+	</div>
 
-  <div class="w3-panel">
-    <h1><b>TRAVEL INSURANCE CHECKER</b></h1>
-	 
-	<img src="bambi-corro-VSnHXBD2Thc-unsplash.jpg" alt="Title Photo" style="width:1100px;height:400px">
-
-  </div>
-
-<!-- <iframe src="https://bots.kore.ai/webclient/81e90958b645492d896a10866dabcb832827bbcbf5dc43fea176db19f8717cbcste9"></iframe> -->
-
-
-  
-  <!-- Grid -->
-  <div class="w3-row w3-container">
-    <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What We Offer</span>
-    </div>
-    <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16">
-      <h3>Design</h3>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-    </div>
-
-    <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16">
-      <h3>Branding</h3>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-    </div>
-
-    <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16">
-      <h3>Consultation</h3>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-    </div>
-
-    <div class="w3-col l3 m6 w3-black w3-container w3-padding-16">
-      <h3>Promises</h3>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-    </div>
-  </div>
-
-  <!-- Grid -->
-  <div class="w3-row-padding" id="plans">
-    <div class="w3-center w3-padding-64">
-      <h3>Pricing Plans</h3>
-      <p>Choose a pricing plan that fits your needs.</p>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 10</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <ul class="w3-ul w3-border w3-center w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Grid -->
-  <div class="w3-row-padding" id="about">
-    <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Who We Are</span>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-card-4">
-        <img src="/w3images/team1.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>Jane Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-card-4">
-        <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Art Director</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-card-4">
-        <img src="/w3images/team3.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact -->
-  <div class="w3-center w3-padding-64" id="contact">
-    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
-  </div>
-
-  <form class="w3-container" action="/action_page.php" target="_blank">
-    <div class="w3-section">
-      <label>Name</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
-    </div>
-    <div class="w3-section">
-      <label>Email</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
-    </div>
-    <div class="w3-section">
-      <label>Subject</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Subject" required>
-    </div>
-    <div class="w3-section">
-      <label>Message</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
-    </div>
-    <button type="submit" class="w3-button w3-block w3-black">Send</button>
-  </form>
-
-</div>
-
-<!-- Footer -->
-
-<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>Footer</h4>
-  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-<link rel='stylesheet' href='https://bots.kore.ai/webclient/UI/dist/kore-ai-sdk.min.css'></link>
-<script src='https://bots.kore.ai/api/platform/websdkjs/17b0f5d073744059af9ce50e9212cff452a47317220648fca5daa4ec494d55b2ste2'></script>
-<script>KoreSDK.show(KoreSDK.chatConfig);</script>
+  </div> 
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            navbar.classList.add("navbar-sticky")
+            navbar.classList.remove("navbar-default")
+          } else {
+            navbar.classList.remove("sticky")
+          }
+        }
+        </script>
 </body>
+
 </html>
