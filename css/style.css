@@ -532,8 +532,8 @@ header {
 
 #content2 h3 {
 	text-align: center;
-	font-size: 1.5em;
-	line-height: 1.5em;
+	font-size: 1.2em;
+	line-height: 1.2em;
 	color: #858585;
 	font-weight: 300;
 }
@@ -569,10 +569,7 @@ header {
 	
 }
 
-#content2 .col-md-3 {
-	width:20%
 
-}
 
 /* ---------------------------- */
 /* Section End - Content 2 */
